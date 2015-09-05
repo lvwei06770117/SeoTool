@@ -1,0 +1,68 @@
+﻿@model SeoToolMvc.Models.OutSite
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>OutSite</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiteName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SiteName)
+            @Html.ValidationMessageFor(model => model.SiteName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SiteDomain)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SiteDomain)
+            @Html.ValidationMessageFor(model => model.SiteDomain)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CreateTime)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CreateTime)
+            @Html.ValidationMessageFor(model => model.CreateTime)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RegApiPath)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RegApiPath)
+            @Html.ValidationMessageFor(model => model.RegApiPath)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PostApiPath)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PostApiPath)
+            @Html.ValidationMessageFor(model => model.PostApiPath)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

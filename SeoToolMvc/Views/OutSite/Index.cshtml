@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SeoToolMvc.Models.OutSite>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteDomain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegApiPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostApiPath)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteDomain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegApiPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostApiPath)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SiteId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SiteId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SiteId })
+        </td>
+    </tr>
+}
+
+</table>

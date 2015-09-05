@@ -1,0 +1,50 @@
+﻿@model SeoToolMvc.Models.OutSite
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>OutSite</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SiteName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SiteName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SiteDomain)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SiteDomain)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreateTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreateTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RegApiPath)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RegApiPath)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PostApiPath)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PostApiPath)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.SiteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

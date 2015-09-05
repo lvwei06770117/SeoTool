@@ -1,0 +1,54 @@
+﻿@model SeoToolMvc.Models.OutSite
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>OutSite</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SiteName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SiteName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SiteDomain)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SiteDomain)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreateTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreateTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RegApiPath)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RegApiPath)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PostApiPath)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PostApiPath)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

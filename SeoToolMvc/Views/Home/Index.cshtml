@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "SEO工具";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                
+            </p>
+        </div>
+    </section>
+}
+<h3>工具列表:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>发外链</h5>
+        使用方法：选择后台已经配置的外链交换站点及登录信息。手动输入外链信息，点击发布即可
+        @Html.ActionLink("外链交换站点列表", "Index", "OutSite")
+        <a href="javascript:;">外链交换站点列表</a>
+    </li>
+
+    <li class="two">
+        <h5>流量导入查询</h5>
+        建设中...
+    </li>
+
+    <li class="three">
+        <h5>蜘蛛收录查询</h5>
+        建设中...
+    </li>
+</ol>
